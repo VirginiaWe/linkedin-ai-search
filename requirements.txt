@@ -1,0 +1,18 @@
+# Core Libraries
+numpy
+pandas
+jsonschema
+
+# Streamlit for Web App
+streamlit
+
+# Machine Learning & AI Models
+sentence-transformers
+scikit-learn
+
+# FAISS for Efficient Similarity Search
+faiss-cpu  # Use 'faiss-gpu' if running on GPU
+
+# Hugging Face Libraries for Model Handling
+transformers
+huggingface-hub

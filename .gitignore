@@ -1,0 +1,14 @@
+# Ignore LinkedIn profile data
+data/linkedin_profiles.csv
+data/profiles_metadata.json
+data/user_feedback.json
+
+# Ignore Python cache & environment files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+
+
