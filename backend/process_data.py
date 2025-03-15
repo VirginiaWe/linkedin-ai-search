@@ -10,7 +10,7 @@ from sentence_transformers import SentenceTransformer
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 # Define absolute paths
-CSV_FILE = os.path.join(BASE_DIR, "data/linkedin_profiles.csv")
+CSV_FILE = os.path.join(BASE_DIR, "data/profiles.csv")
 JSON_FILE = os.path.join(BASE_DIR, "data/profiles_metadata.json")
 FAISS_FILE = os.path.join(BASE_DIR, "data/embeddings.pkl")
 

@@ -1,5 +1,5 @@
 # Ignore LinkedIn profile data
-data/linkedin_profiles.csv
+data/profiles.csv
 data/profiles_metadata.json
 data/user_feedback.json
 
@@ -10,5 +10,3 @@ __pycache__/
 *.pyd
 venv/
 .venv/
-
-
