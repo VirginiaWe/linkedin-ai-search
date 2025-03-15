@@ -1,9 +1,9 @@
-# 🔍 AI-Powered LinkedIn Profile Search
+# 🔍 AI-Powered Profile Search
 
-This project is an **AI-powered search engine for LinkedIn profiles**, allowing users to find relevant candidates based on **natural language queries**. It uses **FAISS for similarity search** and **Hugging Face sentence-transformers** to rank profiles.
+This project is an **AI-powered search engine for people databases**, allowing users to find relevant profiles based on **natural language queries**. It uses **FAISS for similarity search** and **Hugging Face sentence-transformers** to rank profiles.
 
 ## **🚀 Features**
-- 🔎 **Search LinkedIn profiles** using AI-powered embeddings.
+- 🔎 **Search profiles** using AI-powered embeddings.
 - 🎯 **Feedback loop** to improve results over time.
 - ⚡ **Fast similarity search** with FAISS.
 - 🏆 **Customizable AI models** (easily switch transformer models).
@@ -14,8 +14,8 @@ This project is an **AI-powered search engine for LinkedIn profiles**, allowing 
 ## **📦 Installation**
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/your-username/linkedin-ai-search.git
-cd linkedin-ai-search
+git clone https://github.com/your-username/profile-search-ai.git
+cd profile-search-ai
 ```
 
 ### **2️⃣ Set Up a Virtual Environment (Recommended)**
@@ -32,17 +32,17 @@ pip install -r requirements.txt
 ---
 
 ## **📊 CSV Data Structure**
-To use this app, you must provide a CSV file named **`linkedin_profiles.csv`** inside the **`data/`** directory.
+To use this app, you must provide a CSV file named **`profiles.csv`** inside the **`data/`** directory.
 
 ### **✅ Required CSV Format**
 | mobile | name | link | headline | about | group | field | pl | company | position | gender | tags | email | age | date | # | newsletter | source | volunteer | id |
 |--------|------|------|----------|-------|-------|-------|----|---------|----------|--------|------|-------|-----|------|---|------------|--------|-----------|----|
-| +123456 | John Doe | https://linkedin.com/in/johndoe | Data Scientist | AI expert with 10+ years in the field | AI Community | Data Science | USA | Google | Senior Data Scientist | Male | AI, ML | johndoe@email.com | 35 | 2023-04-01 | 1 | Yes | User Submission | Volunteer | 001 |
+| +123456 | John Doe | https://example.com/johndoe | Data Scientist | AI expert with 10+ years in the field | AI Community | Data Science | USA | Google | Senior Data Scientist | Male | AI, ML | johndoe@email.com | 35 | 2023-04-01 | 1 | Yes | User Submission | Volunteer | 001 |
 
 **📌 Notes:**
-- The **`link`** column must contain valid LinkedIn profile URLs.
+- The **`link`** column can contain a valid profile URL.
 - The **`headline`**, **`about`**, **`company`**, **`position`**, and **`tags`** columns are used for search queries.
-- The **file must be in `data/linkedin_profiles.csv`**.
+- The **file must be in `data/profiles.csv`**.
 
 ---
 
@@ -63,7 +63,7 @@ echo '{"feedback": []}' > data/user_feedback.json
 
 ## **🔧 Running the App**
 ### **1️⃣ Generate Embeddings**
-Before using the app, process the LinkedIn profiles:
+Before using the app, process the profiles:
 ```sh
 python backend/process_data.py
 ```
@@ -79,7 +79,7 @@ The **app will launch in your browser** at `http://localhost:8501`.
 
 ## **🛠 Usage**
 1️⃣ **Enter a search query** in natural language (e.g., *"I need a speaker on AI ethics"*).  
-2️⃣ **Browse the top matches** with their LinkedIn links.  
+2️⃣ **Browse the top matches** with their profile links.  
 3️⃣ **Select the best profiles** to train the AI for better future results.  
 4️⃣ **Refine your search** and find better recommendations over time!  
 
@@ -98,7 +98,7 @@ The **app will launch in your browser** at `http://localhost:8501`.
 ## **💡 Updating the App**
 To update the project with new profiles:
 ```sh
-1️⃣ Add new profiles to `data/linkedin_profiles.csv`
+1️⃣ Add new profiles to `data/profiles.csv`
 2️⃣ Run: `python backend/process_data.py`
 3️⃣ Restart: `streamlit run frontend/app.py`
 ```
@@ -109,8 +109,8 @@ To update the project with new profiles:
 ### **Common Issues & Fixes**
 | Problem | Solution |
 |---------|----------|
-| ❌ No results found | Ensure profiles exist in `data/linkedin_profiles.csv` and rerun `process_data.py`. |
-| ⚠️ LinkedIn links not working | Check if the `"link"` column exists in the CSV and `process_data.py` saves `"linkedin_url"`. |
+| ❌ No results found | Ensure profiles exist in `data/profiles.csv` and rerun `process_data.py`. |
+| ⚠️ Profile links not working | Check if the `"link"` column exists in the CSV and `process_data.py` saves `"profile_url"`. |
 | 💾 Memory error on large datasets | Try `faiss-gpu` instead of `faiss-cpu` in `requirements.txt`. |
 | ⚡ Slow search | Switch to `bge-small-en-v1.5` in `config.py` for **faster results**. |
 
@@ -123,11 +123,11 @@ This project is open-source under the **MIT License**.
 
 ## **👨‍💻 Contributors**
 👤 **Pascal Guéra**  
-📧 pascal.guera@gmail.com
+📧 pascal.guera@gmail.com  
 
 👤 **Virginia Wenger**  
-📧 wenger.virginia@gmail.com
-🔐 GitHub: [your-username](https://github.com/your-username)  
+📧 wenger.virginia@gmail.com  
+🔐 GitHub: [VirginiaWe](https://github.com/VirginiaWe)  
+
 ---
 
-🎯 **Now you're ready to use AI-powered LinkedIn search! 🚀🔥**
