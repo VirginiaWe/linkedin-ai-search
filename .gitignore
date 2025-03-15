@@ -1,7 +1,9 @@
 # Ignore LinkedIn profile data
 data/profiles.csv
+data/profiles_with_new_tags.csv
 data/profiles_metadata.json
 data/user_feedback.json
+tags/
 
 # Ignore Python cache & environment files
 __pycache__/

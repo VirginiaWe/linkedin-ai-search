@@ -26,7 +26,7 @@ else:
 
 # Extract relevant columns for embeddings (only if DataFrame is not empty)
 if not df.empty:
-    profile_texts = df.apply(lambda row: f"{row['headline']} {row['about']} {row['field']} {row['company']} {row['position']} {row['gender']} {row['tags']}", axis=1).tolist()
+    profile_texts = df.apply(lambda row: f"{row['headline']} {row['about']} {row['field']} {row['company']} {row['position']} {row['gender']} {' '.join(row['cleaned_tags'])}", axis=1).tolist()
     profile_embeddings = model.encode(profile_texts, convert_to_numpy=True)
 else:
     profile_embeddings = np.array([])  # Prevents errors in similarity calculations
