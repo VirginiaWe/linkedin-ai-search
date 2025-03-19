@@ -1,8 +1,10 @@
-import os
 import re
 import pandas as pd
 import faiss
 import numpy as np
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from sentence_transformers import SentenceTransformer
 from config import MODEL_NAME  # Import model name
 from sklearn.feature_extraction.text import TfidfVectorizer

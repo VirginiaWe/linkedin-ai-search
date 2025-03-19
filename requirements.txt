@@ -5,8 +5,6 @@ jsonschema
 torch
 optimum
 nltk
-re
-json
 
 # Streamlit for Web App
 streamlit

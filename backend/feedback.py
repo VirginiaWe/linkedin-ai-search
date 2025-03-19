@@ -1,8 +1,11 @@
 import json
 import numpy as np
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from sentence_transformers import SentenceTransformer
 from config import MODEL_NAME
-from sentence_transformers import SentenceTransformer
+
 
 FEEDBACK_FILE = "data/user_feedback.json"
 
